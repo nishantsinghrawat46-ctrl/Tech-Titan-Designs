@@ -154,13 +154,13 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">Our Trusted Partners</h2>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-[#00D09C] hover:bg-[#00D09C]/90 text-black font-bold text-lg">
+            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
               <a href="#">Open Account on Groww</a>
             </Button>
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-[#387ED1] hover:bg-[#387ED1]/90 text-white font-bold text-lg">
+            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
               <a href="#">Open Account on Zerodha</a>
             </Button>
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-[#522D88] hover:bg-[#522D88]/90 text-white font-bold text-lg">
+            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
               <a href="#">Open Account on Upstox</a>
             </Button>
           </div>
