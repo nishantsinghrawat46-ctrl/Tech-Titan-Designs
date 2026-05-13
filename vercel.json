@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm install --frozen-lockfile && pnpm --filter @workspace/finance-calculator run build",
+  "buildCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @workspace/finance-calculator run build",
   "outputDirectory": "artifacts/finance-calculator/dist/public",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
