@@ -28,6 +28,63 @@ const features = [
   { title: "Mobile Optimized", desc: "Works perfectly on your phone browser.", icon: Phone },
 ];
 
+const investPlatforms = [
+  {
+    name: "Zerodha",
+    type: "Stock Broker",
+    desc: "India's largest discount broker. Trade stocks, F&O, commodities, and mutual funds with flat-fee brokerage and a powerful Kite trading platform.",
+    tags: ["Stocks", "F&O", "Mutual Funds", "IPO"],
+  },
+  {
+    name: "Groww",
+    type: "Investment App",
+    desc: "A beginner-friendly platform to invest in mutual funds, stocks, and US stocks. Clean UI and zero commission on mutual funds make it ideal for new investors.",
+    tags: ["Mutual Funds", "Stocks", "US Stocks", "Gold"],
+  },
+  {
+    name: "Upstox",
+    type: "Stock Broker",
+    desc: "A fast-growing discount broker backed by Tiger Global. Offers stock trading, IPO investing, and mutual funds with competitive brokerage fees.",
+    tags: ["Stocks", "F&O", "Mutual Funds", "ETF"],
+  },
+  {
+    name: "Angel One",
+    type: "Full-Service Broker",
+    desc: "A full-service broker offering research reports, algo trading, and robo-advisory. Good for investors who want guidance along with trading tools.",
+    tags: ["Stocks", "Advisory", "Algo Trading", "SIP"],
+  },
+  {
+    name: "Coin by Zerodha",
+    type: "Mutual Fund Platform",
+    desc: "Zerodha's direct mutual fund platform. Invest in direct plans with zero commission, saving up to 1% in expense ratio compared to regular plans.",
+    tags: ["Direct MF", "SIP", "Zero Commission"],
+  },
+  {
+    name: "INDmoney",
+    type: "Wealth Management",
+    desc: "An all-in-one wealth platform for stocks, US stocks, mutual funds, and fixed deposits. Tracks your net worth across all investments in one place.",
+    tags: ["Stocks", "US Stocks", "FD", "NPS"],
+  },
+  {
+    name: "ET Money",
+    type: "Investment App",
+    desc: "An Economic Times platform for SIP investing, insurance, NPS, and financial goal planning. Strong analytics help track your portfolio's performance.",
+    tags: ["SIP", "Insurance", "NPS", "Goal Planning"],
+  },
+  {
+    name: "Paytm Money",
+    type: "Investment Platform",
+    desc: "Invest in stocks, mutual funds, NPS, and digital gold through Paytm's investment arm. Easy to use for existing Paytm users.",
+    tags: ["Stocks", "Mutual Funds", "Digital Gold", "NPS"],
+  },
+  {
+    name: "Smallcase",
+    type: "Thematic Investing",
+    desc: "Invest in curated baskets of stocks and ETFs built around a theme or strategy — from 'Electric Vehicles' to 'IT Giants'. Great for passive, theme-based investing.",
+    tags: ["Thematic", "Baskets", "ETF", "Rebalancing"],
+  },
+];
+
 const testimonials = [
   { name: "Rahul S.", role: "Retail Investor", review: "The SIP calculator is incredibly intuitive. Helps me plan my monthly investments clearly.", initials: "RS" },
   { name: "Priya M.", role: "Home Buyer", review: "Used the mortgage and EMI tools to plan my house purchase. The UI is stunning and easy to read.", initials: "PM" },
@@ -149,22 +206,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Affiliate Partners */}
+      {/* Investment Platforms */}
       <section className="py-24 bg-card/30 border-y border-border/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-12">Our Trusted Partners</h2>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
-              <a href="#">Open Account on Groww</a>
-            </Button>
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
-              <a href="#">Open Account on Zerodha</a>
-            </Button>
-            <Button asChild size="lg" className="w-full md:w-auto h-16 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg">
-              <a href="#">Open Account on Upstox</a>
-            </Button>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-14">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">Curated List</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-3">Best Apps & Websites to Invest and Trade</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">A curated list of the most popular and trusted platforms used by Indian investors and traders.</p>
           </div>
-          <p className="text-sm text-muted-foreground italic">* Affiliate links. We may earn a commission if you open an account.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {investPlatforms.map((p, i) => (
+              <motion.div
+                key={p.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.07 }}
+              >
+                <Card className="h-full bg-card/50 backdrop-blur border-border/50 hover:border-primary/40 transition-all group">
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-bold text-lg group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        {p.name[0]}
+                      </div>
+                      <div>
+                        <CardTitle className="text-base">{p.name}</CardTitle>
+                        <span className="text-xs text-primary font-medium">{p.type}</span>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-sm leading-relaxed">{p.desc}</CardDescription>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {p.tags.map(tag => (
+                        <span key={tag} className="text-xs bg-muted px-2 py-0.5 rounded-full text-muted-foreground">{tag}</span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link href="/blog/best-investment-apps-india">
+              <Button variant="outline" size="lg" className="border-primary/40 text-primary hover:bg-primary hover:text-primary-foreground">
+                Read Full Guide to Investment Platforms &rarr;
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
