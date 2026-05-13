@@ -1,0 +1,63 @@
+Create a modern, responsive, and professional Finance Calculator Web App using React.js + Tailwind CSS with a premium fintech-style UI.
+The website should help users calculate:
+EMI (Equated Monthly Installment)
+Loan Eligibility
+Interest Rate
+SIP Returns
+FD Returns
+GST Calculator
+Inflation Calculator
+Loan Amortization Schedule
+Currency Conversion
+Down Payment Calculator
+Credit Card EMI
+Mortgage Calculator
+Design Requirements
+Modern fintech design
+Dark/light mode toggle
+Glassmorphism UI
+Smooth animations using Framer Motion
+Mobile-first responsive design
+Attractive gradients and clean typography
+Dashboard-like layout
+Professional icons
+SEO optimized pages
+Homepage Sections
+Hero Section
+Headline:
+ “Smart Financial Calculators for Better Money Decisions”
+Subheading:
+ “Calculate EMI, loans, investments, SIP returns, taxes, and more instantly.”
+CTA Buttons:
+Start Calculating
+Explore Tools
+Featured Calculators Grid
+ Show calculator cards with icons:
+EMI Calculator
+SIP Calculator
+FD Calculator
+GST Calculator
+Loan Eligibility Calculator
+Inflation Calculator
+Why Choose Us
+Fast calculations
+Accurate financial formulas
+Free to use
+Secure & privacy-friendly
+Mobile optimized
+Finance Tips Blog Section
+ Include cards for:
+How EMI works
+Best investment strategies
+Loan repayment tips
+Saving money smartly
+Testimonials Section
+Footer
+About
+Contact
+Privacy Policy
+Terms & Conditions
+Social Links
+The theme of the website should resist to the first image i have provided you weather it was colour or layout theme also i want to add affiliate links to the website like affiliate links for grow,zerodha, upstox i will add affiliate links futher just provide me buttons for it in the website also add a blog section in the website where you have to write about all the tools ,why they are important and why should you use it to make it seo friendly and strengthen my seo my the website so that the website can reach to larger audience
+
+The website should be seo friendly and most importantly it should be asthetically very pleasant and very smart and dynamic in nature.you want to specifically focus on looks which is very must prioritized.
